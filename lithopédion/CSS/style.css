@@ -1,0 +1,142 @@
+/* Parametres de bases */
+:root{
+    --clr-primary-200:#F3EEDE;
+    --clr-primary-400:#824936;
+
+    --clr-basic-100:#fff;
+    --clr-basic-900:#222C2A;
+
+    --ff-para:'Roboto', sans-serif;
+    --ff-title:'Roboto Condensed', sans-serif;
+}
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1{
+    font-family: var(--ff-title);
+    font-size: 1.5em;
+    margin-bottom:  1.5em;
+}
+
+p{
+    font-family: var(--ff-para);
+}
+
+a{
+    color:var(--clr-primary-400);
+}
+
+a:hover{
+    color:#000;
+}
+
+.container{
+    width: 90%;
+    margin-inline: auto;
+    padding:4rem 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg-white{
+    background-color: var(--clr-basic-100);
+    color:var(--clr-basic-900);
+}
+
+.bg-light{
+    background-color:var(--clr-primary-200);
+    color:var(--clr-primary-400);
+}
+
+
+.bg-dark{
+    background-color: var(--clr-basic-900);
+    color:var(--clr-basic-100);
+}
+
+.left{
+    margin-bottom: 1em;
+}
+
+.navigation li{
+    margin-left: 0.4em;
+}
+
+.tracklist{
+    margin: 2rem 0;
+}
+
+.tracklist li{
+    padding: 1em 5em;
+}
+
+.tracklist li:hover{
+    padding: 1em 5.5em;
+    background-color: #eee;
+}
+
+@media(min-width:650px){
+    h1{
+        margin-bottom: 1.8em;
+    }
+
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navigation{
+        display: flex;
+    }
+
+    .navigation li{
+        margin:0 0 0 3em;
+    }
+
+    .left{
+        margin-bottom: 0;
+    }
+
+    .tracklist li{
+        padding: 1em 8em;
+    }
+
+    .tracklist li:hover{
+        padding: 1.4em 8em;
+    }
+    
+}
+
+@media(min-width:880px){
+    h1{
+        font-size: 2em;
+    }
+
+    p{
+        font-size: 1.2em;
+    }
+
+    .tracklist li{
+        padding: 1em 12em;
+    }
+
+    .tracklist li:hover{
+        padding: 1.4em 12em;
+    }
+}

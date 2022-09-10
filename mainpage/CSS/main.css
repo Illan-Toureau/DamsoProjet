@@ -1,0 +1,187 @@
+            /* Parametres de bases */
+
+:root{
+    --clr-primary-200:#F3EEDE;
+    --clr-primary-400:#824936;
+
+    --clr-basic-100:#fff;
+    --clr-basic-900:#222C2A;
+
+    --ff-para:'Roboto', sans-serif;
+    --ff-title:'Roboto Condensed', sans-serif;
+}
+
+*,
+*::after,
+*::before{
+    margin:0;
+    box-sizing: border-box;
+}
+
+            /* /Parametres */
+            
+            /* Css des titres*/
+
+h1,
+h2{
+    font-family: var(--ff-title);
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+h1{
+    margin-bottom:0.5em;
+}
+
+h2{
+    position: relative;
+    left: 1rem;
+}
+
+            /* /titres */
+            /* para */
+p{
+    font-family: var(--ff-para);
+    font-weight: 300;
+    line-height: 1.6;
+    margin:1em 0 0.5em 0;
+}
+            /* /para */
+
+                /*GLOBAL*/
+
+.container{
+    width: min(85%,70.5rem);
+    margin: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+header,
+section,
+footer{
+    padding:4rem 0;
+}
+
+.split{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+                /* /GLOBAL */
+
+
+                /* HEADING*/
+.bg-light{
+    background-color: var(--clr-primary-200);
+    color: var(--clr-primary-400);
+}
+
+.bg-light p{
+    font-style: italic;
+}
+                /* /HEADING */
+
+
+                /*SECTION ABOUT */
+.pp{
+    max-width: 150px;
+    border:1px solid #222C2A;
+    margin:1em 1.5em;
+    display: block;
+}
+                /* /SECTION ABOUT */
+
+
+                /* SECTION DISCOGRAPHIE */
+.bg-brown{
+    background-color: var(--clr-primary-400);
+    color: var(--clr-basic-100);
+}
+
+.bg-brown h2{
+    color:var(--clr-primary-200);
+}
+
+.forhover{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg-brown hr{
+    color:var(--clr-primary-200);
+}
+
+.album{
+    border: 0px;
+    width:110px;
+    margin:1em 1.5em;
+    display: block;
+}
+                /* /DISCOGRAPHIE */
+
+
+                /* FOOTER */
+.bg-dark{
+    background-color: var(--clr-basic-900);
+    color:var(--clr-basic-100);
+}
+                /* /FOOTER */
+
+                /* MEDIA@*/
+
+@media(min-width:750px){
+    .pp{
+        min-width:180px;
+        margin:2em;
+    }
+    
+    .about p{
+        max-width: 55ch;
+        margin: 2em;
+    }
+
+    .about .split{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+    }
+
+    .bg-brown p{
+        margin-top: 3em;
+    }
+}
+
+@media(min-width:980px){
+    .album{
+        min-width:160px;
+        margin:1em;
+        display: block;
+    }
+
+    .forhover:hover{
+        font-size:19px;
+        margin-inline:1em;
+        transition: 0.5s;
+        transition-delay: 0.3s;
+    }
+
+    .bg-light{
+        padding:6em 0;
+    }
+
+@media(max-width:370px){
+    .album{
+        width: 90px;
+    }
+
+    .bg-brown p,
+    .bg-dark p{
+        font-size: 0.8em;
+    }
+}
+}
+                /* /MEDIA@ */
